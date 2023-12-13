@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Downing.......</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+<body tabindex="0">
+<div class="top-grid">
+  <div class="grid-item1">
+    <img src="HOME.png" alt="Button 1" onclick="goToPage()">
+  </div>
+  <div class="grid-item2">
+    <img src="refresh.png" alt="Button 2" onclick="refreshPage()">
+  </div>
+  <div class="grid-item3">
+    <img src="sreenshot.png" alt="Button 3" onclick="printPage()">
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.1: Red Carrots</h3>
+    <p class="grid-item-description">Chop into small pieces or slices.</p>
+    <video class="video-item1" width="800" muted autoplay onended="playNext('v2')">
+      <source src="v1.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar1"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.2: Other Vegetables</h3>
+    <p class="grid-item-description">Add onions, carrots, potatoes, chopped and set aside.</p>
+    <video class="video-item2" width="800" autoplay onended="playNext('v3')">
+      <source src="v2.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar2"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.3: Add Oil</h3>
+    <p class="grid-item-description">Heat the pot and add a bit of oil to saute the vegetables.</p>
+    <video class="video-item3" width="800" autoplay onended="playNext('v4')">
+      <source src="v3.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar3"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.4: Add Water</h3>
+    <p class="grid-item-description">Pour in an adequate amount of water in the pot.</p>
+    <video class="video-item4" width="800" autoplay onended="playNext('v5')">
+      <source src="v4.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar4"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.5: Season</h3>
+    <p class="grid-item-description">Add salt, pepper, or preferred seasonings according to taste.</p>
+    <video class="video-item5" width="800" autoplay onended="playNext('v6')">
+      <source src="v5.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar5"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <h3 class="grid-item-title">STEP.6: Finsh</h3>
+    <p class="grid-item-description">Pour the soup from the pot into your bowl, enjoy!</p>
+    <video class="video-item6" width="800" autoplay onended="playNext('v1')">
+      <source src="v6.mp4" type="video/mp4">
+    </video>
+    <div class="progress-item">
+      <div class="progress-bar6"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <div class="progress-header">
+    Overall Soup Download Progress:
+</div>
+<div class="overall-progress">
+    <div class="overall-progress-bar"></div>
+    <div class="overall-progress-text">0%</div>
+</div>
+
+<script src="script.js"></script>
+<script src="progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+html, body {
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-grid {
+  padding-bottom: 0;
+  gap: 10%;
+  margin-top: 0; 
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center; 
+  align-items: center; 
+}
+
+@media (max-width: 1200px) {
+  .button-grid {
+    width: 40%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  padding-bottom: 0;
+  margin-top: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-with-filter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.new-button:hover,
+#filterButton:hover {
+  transform: scale(1.1);
+}
+
+.new-button:hover::before,
+#filterButton:hover::before {
+  width: 60%;
+  height: 60%;
+}
+
+h1 {
+  background-color: rgb(244, 98, 98);
+  border-radius: 80px;
+  width: 120%;
+  font-family: "Bauhaus 93", sans-serif; 
+  font-size: 4vw;
+  color: rgb(255, 255, 255);
+  text-align: center; 
+  font-weight: bold;
+}
+
+.image {
+    width: 70%;
+    display: block;
+    margin: 0 auto 30px; 
+    animation: fadeInOut 2s ease-in-out infinite alternate; 
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8; 
+    }
+  }
+
+  .image:hover {
+    transform: scale(1.1); 
+  }
+
+  .new-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .new-button {
+    width: 45%;
+    margin-top: auto; 
+    margin-right: auto; 
+  }
+
+
+  .filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .filter.active {
+    display: block;
+    opacity: 0.9;
+  }
+
+  .filter.active::before {
+    content: "OH NO!! You just turned off the WIFI, turn it on!!"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    font-size: 0; 
+    opacity: 0; 
+    animation: textAnimation 3s forwards, shakeAnimation 0.1s infinite; 
+  }
+  
+  @keyframes textAnimation {
+    0% {
+      font-size: 0;
+      opacity: 0;
+    }
+    100% {
+      font-size: 24px; 
+      opacity: 1; 
+    }
+  }
+  
+  @keyframes shakeAnimation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(-3deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+      transform: translate(-50%, -50%) rotate(3deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+  .button-container {
+    z-index: 2;
+     transition: all 0.5s ease;
+     justify-content: center; 
+     align-items: center; 
+  }
+
+  #filterButton:hover {
+    transform: scale(1.1); 
+  }
+  
+  #filterButton:hover::before {
+    width: 60%;
+    height: 60%; 
+  }
+
+  .button-container1 {
+    z-index: 2;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  
+  #filterButton {
+    transition: all 0.5s ease;
+    align-items: center;
+    z-index: 1;
+    width: 100%; 
+    height:auto; 
+    position: relative;
+  }
+
+
+  #filterButton2 {
+    z-index: 2;
+    width: 100%; 
+    height:auto; 
+    position: relative;
+  }
+
+  #filterButton2:hover {
+    transform: scale(1.1); 
+  }
+  
+  #filterButton2:hover::before {
+    width: 60%;
+    height: 60%; 
+  }
+  
+  .filter1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      opacity: 0;
+      display: none;
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .filter1.active {
+      display: block;
+      opacity: 0.9;
+    }
+
+    .filter1.active::before {
+      font-family: "Caviar Dreams", sans-serif; 
+      content: "Amidst the digital era, webpage download speed stands as a crucial factor influencing our online experience. Similar to crafting a delectable soup, webpage loading involves a sequence of steps. Our exhibition revolves around the theme of webpage download speed, showcasing the essence of each step in the loading process. Each step parallels different stages in soup-making: preparing ingredients, heating, stirring, seasoning, and the final enjoyment. The progress bar serves as our method to exhibit this process, illustrating the proportion of each step in webpage loading. Through this exhibition, we aim to offer audiences a deeper insight into the intricacies of webpage loading and the significance of optimizing loading speed in enhancing user experience.";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55%; 
+      line-height: 1.6; 
+      text-align: justify; 
+      white-space: normal;
+      color: rgb(10, 10, 10);
+      z-index: 1;
+      font-size: 18px; 
+      opacity: 2;
+    }
+
+    @media print {
+      .top-grid {
+          display: none;
+      }
+    }
+    
